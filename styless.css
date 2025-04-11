@@ -45,7 +45,7 @@ body{
 
   /*Contenedor Inicio*/
   .contenedor-inicio{
-    background-image: url('fondo\ inicio.png'); /*Carga la imagen deseada*/
+    background-image: url('fondo inicio.png'); /*Carga la imagen deseada*/
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -56,6 +56,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
   }
 
   .bateria{
@@ -73,13 +74,16 @@ body{
   }
 
   .info1{ /*cuadro de texto*/
-    background-color: rgb(233, 239, 155);
-    width: 20%;
-    height: 100%;
+    background-color: rgb(233, 239, 155, 0.2);
+    color: white;
+    width: 350px;
+    height: 250px;
     border-radius: 8px;
     border-width: 5px; /* Aumenta el grosor del borde */
     border-color: #3498db; /* Cambia el color del borde */
     border-style: solid; /* Define el estilo del borde (puede ser 'solid', 'dashed', 'dotted', etc.) */
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   
   /*Contenedor Productos*/
@@ -136,14 +140,32 @@ body{
 
   /*Conetenedor Servicios*/
   .contenedor-servicios{
-    background-color: rgb(48, 217, 211);
+    background-image: url('fondoservicios.png'); /*Carga la imagen deseada*/
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     width: 100%;
     height: 100%;
     margin-top: 20px;
     border-radius: 8px;
     justify-items: center;
   }
-
+  /*Contenedor de textos del contenedor de servicios*/
+  .servicios1{
+    background-color: rgb(255, 215, 0, 0.2);
+    color: #faf8f8;
+    width: 500px;
+    display: flex;           /* o display: grid; */
+    flex-direction: column;  /* para que estén uno debajo del otro */
+    gap: 20px;               /* espacio entre los elementos */
+    margin-top: 10px;        /* margen superior respecto al padre */
+    margin-bottom: 10px;     /* margen inferior respecto al padre */
+    border-radius: 8px;
+    border-width: 5px; /* Aumenta el grosor del borde */
+    border-color: #faf8f8; /* Cambia el color del borde */
+    border-style: solid; /* Define el estilo del borde (puede ser 'solid', 'dashed', 'dotted', etc.) */
+    border-radius: 8px;
+  }
     /*Conetenedor Contacto*/
     .contenedor-contacto{
         background-color: rgb(217, 187, 240);
