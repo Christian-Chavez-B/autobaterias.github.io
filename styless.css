@@ -1,0 +1,165 @@
+body{
+    background-color: rgb(6, 6, 143);
+
+}
+.titulo{
+    color: white;
+    text-align: center;
+}
+
+/*Diseño del menu*/
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #3c1cef; /*color de fondo de la barra de navegacion*/
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: fixed; /* Fija el navbar en la parte superior */
+    top: 10px; /* Lo coloca en la parte superior */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* Cambia el color de fondo y texto al pasar el mouse */
+  .nav-links li a:hover {
+    background-color: #FFD700; /* Color de fondo al hacer hover */
+    color: #333; /* Color del texto al hacer hover */
+    border-radius: 5px;
+  }
+
+  /*Contenedor Inicio*/
+  .contenedor-inicio{
+    background-image: url('fondo\ inicio.png'); /*Carga la imagen deseada*/
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bateria{
+      width: 300px; /* Ancho de la imagen de bateria*/
+  }
+  .logo-principal{ /*Ubicación logo empresa*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-auto{ /*Tamaño del logo del autobaterias*/
+    width: 30%;
+    height: 20%;
+  }
+
+  .info1{ /*cuadro de texto*/
+    background-color: rgb(233, 239, 155);
+    width: 20%;
+    height: 100%;
+    border-radius: 8px;
+    border-width: 5px; /* Aumenta el grosor del borde */
+    border-color: #3498db; /* Cambia el color del borde */
+    border-style: solid; /* Define el estilo del borde (puede ser 'solid', 'dashed', 'dotted', etc.) */
+  }
+  
+  /*Contenedor Productos*/
+  .contenedor-productos{
+    background-image: url('fondoproductos.png'); /*Carga la imagen deseada*/
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.titulo-productos{
+  background-color: #FFD700;
+  display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  border-radius: 8px;
+}
+/*1er contenedor de imagen dentro de productos*/
+.bateria1{
+  background-color: rgba(52, 152, 219, 0.2); /* 0.2 = 20% de opacidad */
+  display: flex;
+  flex-direction: column;   /* apila verticalmente */
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  width: 20%;
+  height: 20%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.bateria1 label {
+  color: white;/*cambio color de texto dentro de los label dentro de bateria1*/
+  font-weight: bold; /*cambia a negrilla la letra*/
+}
+.bateria1 p {
+  color: white;/*cambio color de texto dentro de los p dentro de bateria1*/
+  font-weight: bold; /*cambia a negrilla la letra*/
+}
+
+.bateria-a{ /*Dimensiones de primer imagen en Productos*/
+    width: 100%;
+    height: 100%;
+}
+
+  /*Conetenedor Servicios*/
+  .contenedor-servicios{
+    background-color: rgb(48, 217, 211);
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    justify-items: center;
+  }
+
+    /*Conetenedor Contacto*/
+    .contenedor-contacto{
+        background-color: rgb(217, 187, 240);
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        border-radius: 8px;
+        justify-items: center;
+      }
+
+    /*Conetenedor Informacion*/
+    .contenedor-informacion{
+        background-color: rgb(243, 199, 25);
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        border-radius: 8px;
+        justify-items: center;
+      }
