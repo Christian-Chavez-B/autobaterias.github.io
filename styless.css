@@ -11,6 +11,8 @@ body{
 /* Estilos para la barra de navegación */
 .navbar {
     background-color: #3c1cef; /*color de fondo de la barra de navegacion*/
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
     border-radius: 8px;
     position: fixed; /* Fija el navbar en la parte superior */
@@ -19,11 +21,35 @@ body{
     right: 0;
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
   }
+
+  .whatsapp {
+    position: absolute;
+    right: 20px;   
+    background-color: #4cf00b;
+    color: black;        /* Texto en negro */
+    font-weight: bold;   /* Texto en negrita */
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    display: flex; /* Activar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Alinear texto al centro si hay más de una línea */
+    padding: 10px; /* Opcional para que no quede muy pegado a los bordes */
+  }
+
+  .whatsapp:hover{
+    background-color: #FFD700;
+  }
   
   .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
+    flex: 1px;
+    list-style: none;
+    gap: 1.5rem; /* o el espaciado que prefieras */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
     margin: 0;
     padding: 0;
   }
@@ -59,6 +85,19 @@ body{
     gap: 20px;
   }
 
+  .horario{
+    background-color: #FFD700;
+    color: black;        /* Texto en negro */
+    font-weight: bold;   /* Texto en negrita */
+    width: 200px;
+    height: auto;
+    border-width: 5px;
+    border-color: #3498db;
+    border-style: solid;
+    border-radius: 8px;
+    margin-left: 50px;
+  }
+
   .bateria{
       width: 300px; /* Ancho de la imagen de bateria*/
   }
@@ -73,18 +112,27 @@ body{
     height: 20%;
   }
 
-  .info1{ /*cuadro de texto*/
-    background-color: rgb(233, 239, 155, 0.2);
+  .info1 {
+    background-color: rgba(233, 239, 155, 0.2);
     color: white;
     width: 350px;
-    height: 250px;
+    height: 300px;
     border-radius: 8px;
-    border-width: 5px; /* Aumenta el grosor del borde */
-    border-color: #3498db; /* Cambia el color del borde */
-    border-style: solid; /* Define el estilo del borde (puede ser 'solid', 'dashed', 'dotted', etc.) */
+    border-width: 5px;
+    border-color: #3498db;
+    border-style: solid;
     margin-top: 30px;
     margin-bottom: 30px;
+    
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  
+    overflow-y: auto; /* Muestra scroll vertical si es necesario */
   }
+  
+  
   
   /*Contenedor Productos*/
   .contenedor-productos{
@@ -148,10 +196,16 @@ body{
     height: 100%;
     margin-top: 20px;
     border-radius: 8px;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;         /* Permite que se acomoden en varias filas */
+    gap: 20px;               /* Espacio entre las cajas */
+    justify-content: center; /* Centra las cajas horizontalmente */
   }
   /*Contenedor de textos del contenedor de servicios*/
   .servicios1{
+    flex: 0 1 calc(50% - 20px); /* Cada caja ocupa el 50% menos el espacio del gap */
+    box-sizing: border-box;
+    padding: 20px;
     background-color: rgb(255, 215, 0, 0.2);
     color: #faf8f8;
     width: 500px;
@@ -184,4 +238,44 @@ body{
         margin-top: 20px;
         border-radius: 8px;
         justify-items: center;
+      }
+
+      .faq-container {
+        max-width: 600px;
+        margin: 50px auto;
+        font-family: Arial, sans-serif;
+      }
+  
+      .faq-item {
+        border-bottom: 1px solid rgb(243, 199, 25);
+      }
+  
+      input[type="checkbox"] {
+        display: none;
+      }
+  
+      .faq-label {
+        display: block;
+        padding: 15px;
+        cursor: pointer;
+        background: #1a2feb;
+        transition: background 0.3s;
+        font-weight: bold;
+      }
+  
+      .faq-label:hover {
+        background: #e0e0e0;
+      }
+  
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        background: #fff;
+        transition: max-height 0.3s ease;
+        padding: 0 15px;
+      }
+  
+      input[type="checkbox"]:checked + .faq-label + .faq-content {
+        max-height: 200px;
+        padding: 15px;
       }
