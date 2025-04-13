@@ -165,34 +165,89 @@ body{
 /*1er contenedor de imagen dentro de productos*/
 .bateria1{
   background-color: rgba(52, 152, 219, 0.2); /* 0.2 = 20% de opacidad */
+  color: white;
   display: flex;
   flex-direction: column;   /* apila verticalmente */
   justify-content: center;  /* centra horizontalmente */
   align-items: center;      /* centra verticalmente */
-  width: 100%;
-  height: 150px;
+  width: 300px;
+  height: 350px;
   object-fit: cover; /* Escala y recorta sin deformar */
   margin-top: 10px;
   border-radius: 8px;
 }
 
-.bateria1 label {
-  color: white;/*cambio color de texto dentro de los label dentro de bateria1*/
-  font-weight: bold; /*cambia a negrilla la letra*/
-  display: block;
-  margin-top: 10px;
-}
-.bateria1 p {
-  color: white;/*cambio color de texto dentro de los p dentro de bateria1*/
-  font-weight: bold; /*cambia a negrilla la letra*/
-  font-size: 14px;
-  margin-top: 10px;
+.bateria-a{
+  width: 250px;
+  height: 200px;
+  border-radius: 8px;
 }
 
-.bateria-a{ /*Dimensiones de primer imagen en Productos*/
-    width: 100%;
-    height: 100%;
+/*Popup dentro del segmento productos*/
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
 }
+
+/* Mostrar el popup */
+.popup.show {
+  display: block;
+}
+
+/* Contenido del popup */
+.popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+/* Entrada: deslizamiento hacia arriba */
+@keyframes slideUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Salida: deslizamiento hacia abajo */
+@keyframes slideDown {
+  to {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+}
+
+.popup-content.hide-animation {
+  animation: slideDown 0.4s ease-in forwards;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
 
   /*Conetenedor Servicios*/
   .contenedor-servicios{

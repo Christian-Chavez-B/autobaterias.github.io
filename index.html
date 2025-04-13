@@ -90,59 +90,69 @@
     <!--Sección Productos-->
     <section class="productos" id="productos">
         <h2 class="titulo-productos">PRODUCTOS</h2>
-    <div class="contenedor-padre-productos">
-        <div class="contenedor-productos">
-            <!--1ra imagen-->
-            <div class="bateria1" alt="bateria1">
-                <label>KAISER C5</label>
-                <img class="bateria-a" src="BATERIA KAISER C5.png">
-                <p>CARACTERÍSTICAS: <br>
-                    VOLTAJE - 12V <br>
-                    CAP NOMINAL - 90 <br>
-                    POLARIDAD - + <br>
-                    LARGO - 286 <br>
-                    ANCHO - 185 <br>
-                    ALTO - 192
-                </p>
+        <div class="contenedor-padre-productos">
+            <div class="contenedor-productos">
+                <!--1ra imagen-->
+                <div class="bateria1" data-info="Batería KAISER C5 - Alta capacidad, ideal para vehículos de carga.">
+                    <h3>KAISER C5</h3>
+                    <img class="bateria-a" src="KAISERC5.png" alt="Batería KAISER C5">
+                    <br>
+                    <label>Pulsa para mas información..</labelz>
+                </div>
+    
+                <!--2da imagen-->
+                <div class="bateria1" data-info="Batería KAISER C4 - Compacta y eficiente para autos urbanos.">
+                    <h3>KAISER C4</h3>
+                    <img class="bateria-a" src="KAISER C4.png" alt="Batería KAISER C4">
+                    <br>
+                    <label>Pulsa para mas información..</labelz>
+                </div>  
+                
+                 <!--3ra imagen-->
+                 <div class="bateria1" data-info="Batería BOSH S5 - DETALLE.">
+                    <h3>BOSH S5</h3>
+                    <img class="bateria-a" src="BOSH S5.png" alt="Batería BOSH S5">
+                    <br>
+                    <label>Pulsa para mas información..</labelz>
+                </div>     
+                
+                 <!--4ta imagen-->
+                 <div class="bateria1" data-info="Batería BOSH S4 - DETALLE.">
+                    <h3>BOSH S4</h3>
+                    <img class="bateria-a" src="BOSH S4.png" alt="Batería BOSH S4">
+                    <br>
+                    <label>Pulsa para mas información..</labelz>
+                </div>   
+                
+                 <!--5ta imagen-->
+                 <div class="bateria1" data-info="Batería BOSH T5 PRO - DETALLE.">
+                    <h3>BOSH T5 PRO</h3>
+                    <img class="bateria-a" src="BOSH T5 PRO.png" alt="Batería BOSH T5 PRO">
+                    <br>
+                    <label>Pulsa para mas información..</labelz>
+                </div>    
+                
+                 <!--6ta imagen-->
+                 <div class="bateria1" data-info="Batería BOSH S3 - DETALLE.">
+                    <h3>BOSH S3</h3>
+                    <img class="bateria-a" src="BOSH S3.jpg" alt="Batería BOSH S3">
+                    <br>
+                    <label>Pulsa para mas información..</labelz>
+                </div>      
+                     
+                
             </div>
-
-             <!--2da imagen-->
-             <div class="bateria1" alt="bateria1">
-                <label>KAISER C4</label>
-                <img class="bateria-a" src="BATERIA KAISER C4.png">
-                <p>PENDIENTE</p>
-            </div>           
-
-             <!--3ra imagen-->
-             <div class="bateria1" alt="bateria1">
-                <label>BOSH S5</label>
-                <img class="bateria-a" src="BATERIA - BOSH S5.png">
-                <p>CARACTERÍSTICAS: <br>
-                    VOLTAJE - 12V <br>
-                    AMPERAJE - 83 <br>
-                    POLARIDAD + - <br>
-                    LARGO - 261 <br>
-                    ANCHO - 168 <br>
-                    ALTO - 225
-                </p>
-            </div> 
-
-              <!--4ta imagen-->
-              <div class="bateria1" alt="bateria1">
-                <label>BOSH S4</label>
-                <img class="bateria-a" src="BATERIA BOSH S4.png">
-                <p>CARACTERÍSTICAS: <br>
-                    VOLTAJE - 12V <br>
-                    AMPERAJE - 43 <br>
-                    POLARIDAD - + <br>
-                    LARGO - 236 <br>
-                    ANCHO - 133 <br>
-                    ALTO - 226
-                </p>
-            </div>                               
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p id="popup-text"></p>
         </div>
     </div>
-    </section>
+    
 
     <!--Sección Servicios-->
     <section class="servicios" id="servicios">
@@ -244,5 +254,6 @@
             </div>
           </div>
     </section>
+    <script src="index.js"></script>
 </body>
 </html>
