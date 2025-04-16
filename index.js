@@ -32,3 +32,66 @@ window.onclick = function(event) {
         cerrarPopupConAnimacion();
     }
 }
+
+//CARRUSEL DE IMAGENES
+document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-image');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const carousel = document.querySelector('.carousel');
+    const dots = document.querySelectorAll('.dot');
+  
+    let interval = setInterval(showNextImage, 3000);
+  
+    function showImage(index) {
+      images[currentIndex].classList.remove('active');
+      dots[currentIndex].classList.remove('active-dot');
+  
+      currentIndex = (index + images.length) % images.length;
+  
+      images[currentIndex].classList.add('active');
+      dots[currentIndex].classList.add('active-dot');
+    }
+  
+    function showNextImage() {
+      showImage(currentIndex + 1);
+    }
+  
+    function showPrevImage() {
+      showImage(currentIndex - 1);
+    }
+  
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(showNextImage, 3000);
+    }
+  
+    nextBtn.addEventListener('click', () => {
+      showNextImage();
+      resetInterval();
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      showPrevImage();
+      resetInterval();
+    });
+  
+    // Indicadores
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showImage(index);
+        resetInterval();
+      });
+    });
+  
+    // Pausar carrusel al pasar el mouse
+    carousel.addEventListener('mouseenter', () => {
+      clearInterval(interval);
+    });
+  
+    carousel.addEventListener('mouseleave', () => {
+      interval = setInterval(showNextImage, 3000);
+    });
+  });
+  
