@@ -106,7 +106,7 @@ body{
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     width: 100%;
-    height: 100%;
+    height: 350px;
     margin-top: 0px;
     border-radius: 8px;
     display: flex;
@@ -156,7 +156,7 @@ body{
   .info1 {
     background-color: rgba(233, 239, 155, 0.2);
     color: white;
-    width: 350px;
+    width: 450px;
     height: 300px;
     border-radius: 8px;
     border-width: 5px;
@@ -310,44 +310,49 @@ body{
     /*Conetenedor Contacto*/
     .contenedor-contacto {
       background-color: #11153a;
-      display: flex;
+      color: #eedf5d;;
       width: 100%;
-      height: 100%;
       margin-top: 20px;
-      border-radius: 8px;
-      justify-content: center; /* centra horizontalmente */
-      align-items: center;     /* centra verticalmente */
-      gap: 20px;
-    }    
-
-    .contenedor-info {
-      background-color: #ecf38f; 
-      width: 400px;
-      height: 450px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* Centra verticalmente */
-      align-items: center;     /* Centra horizontalmente */
-      text-align: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #2c3e50; /* Un color que resalte, puedes probar también #FF5722 o #1a1a1a */
-      font-weight: bold; 
       border-radius: 8px;
       padding: 20px;
       box-sizing: border-box;
-      border: 4px solid rgb(11, 247, 235); /* Cambia el color si quieres otro */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
-
+    
+    .fila-contacto {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .contenedor-maps iframe {
+      border-radius: 8px;
+    }
+    
     .redes-sociales {
       display: flex;
-      justify-content: center; /* Centra horizontalmente */
-      gap: 16px;
-      width: 200px;
-      background-color: #f5f8f6;
+      justify-content: center;
+      gap: 20px;
+      background-color: #eedf5d;
+      display: flex;
       border-radius: 8px;
       padding: 10px;
     }
+
+    .redes-sociales i {
+      font-size: 40px; /* Puedes ajustar a 36px o 40px si quieres aún más grandes */
+      color: #11153a;  /* Opcional: cambia el color si lo deseas */
+      transition: transform 0.2s ease;
+    }
     
+    .redes-sociales i:hover {
+      transform: scale(1.2); /* Efecto hover para dar un toque visual */
+    }
 
     /*Conetenedor Informacion*/
     .contenedor-informacion{
