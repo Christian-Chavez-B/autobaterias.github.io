@@ -6,7 +6,9 @@ body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #11153a;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  background-color: #fdfdfd;
 }
 
 .titulo{
@@ -38,19 +40,26 @@ body{
 }
 
 /*Diseño del menu*/
+/*Tamaño del logo de Autobaterias*/
+.logo1{
+width: 260px;
+height: 60px;
+margin-left: 80px;
+}
+
 /* Estilos para la barra de navegación */
 .navbar {
-    background-color: #11153a; /*color de fondo de la barra de navegacion*/
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 8px;
-    position: fixed; /* Fija el navbar en la parte superior */
-    top: 10px; /* Lo coloca en la parte superior */
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  }
+  background-color: #fdfdfd; /* color de fondo de la barra de navegación */
+  display: flex;
+  align-items: center;
+  padding: 20px 20px; /* aumenta el alto con más padding vertical */
+  border-radius: 0; /* elimina el borde redondeado si ya no hay espacio arriba */
+  position: fixed; /* fija el navbar en la parte superior */
+  top: 0; /* sin espacio arriba */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* asegura que esté por encima de otros elementos */
+}
 
   .nav-links {
     list-style: none;
@@ -65,7 +74,7 @@ body{
   }
   
   .nav-links li a {
-    color: #eedf5d;
+    color: #11153a;
     text-decoration: none;
     font-weight: bold;
     padding: 6px 10px;
@@ -79,27 +88,21 @@ body{
     border-radius: 5px;
   }
 
-  /*Video*/
-  .mi-contenedor {
-    max-width: 800px;
-    margin: 10px 0px;
-    padding: 0px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-  }
-  
-  .video-contenido {
-    width: 225px;      
-    height: 300px;
-    display: block;
-    /*margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;*/
-    border-radius: 8px;
-  }
-  
   /*Contenedor Inicio*/
+  .foto-inicio{
+    background-image: url('fondo1.jpeg'); /*Carga la imagen deseada*/
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%;
+    height: 500px;
+    margin-top: 0px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
   .contenedor-inicio{
     background-image: url('fondo inicio.png'); /*Carga la imagen deseada*/
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
@@ -108,7 +111,7 @@ body{
     width: 100%;
     height: 350px;
     margin-top: 0px;
-    border-radius: 8px;
+    /*border-radius: 8px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,7 +160,7 @@ body{
     background-color: rgba(233, 239, 155, 0.2);
     color: white;
     width: 450px;
-    height: 300px;
+    height: 250px;
     border-radius: 8px;
     border-width: 5px;
     border-color: #3498db;
@@ -309,8 +312,8 @@ body{
 
     /*Conetenedor Contacto*/
     .contenedor-contacto {
-      background-color: #11153a;
-      color: #eedf5d;;
+      background-color: #c8c9ce;
+      color: #11153a;
       width: 100%;
       margin-top: 20px;
       border-radius: 8px;
@@ -338,7 +341,7 @@ body{
       display: flex;
       justify-content: center;
       gap: 20px;
-      background-color: #eedf5d;
+      background-color: #c8c9ce;
       display: flex;
       border-radius: 8px;
       padding: 10px;
