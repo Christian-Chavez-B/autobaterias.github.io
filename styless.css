@@ -89,20 +89,17 @@ margin-left: 80px;
   }
 
   /*Contenedor Inicio*/
-  .foto-inicio{
-    background-image: url('fondo2.jpeg'); /*Carga la imagen deseada*/
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    width: 100%;
+  .foto-inicio {
+    background-image: url('fondo1.jpeg');
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1200px;
     height: 500px;
-    margin-top: 0px;
-    border-radius: 8px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
+}
+
   .contenedor-inicio{
     background-image: url('fondo inicio.png'); /*Carga la imagen deseada*/
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
@@ -156,6 +153,39 @@ margin-left: 80px;
     border-radius: 8px;
   }
 
+  /*BANNER DE SERVICIO A DOMICILIO*/
+  .banner {
+    width: 100vw;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle, #90bcd6, #0077be, #b283c6);
+  }
+  
+  .slider {
+    display: flex;
+    width: calc(50%); /* dos imágenes */
+    height: 100%;
+    animation: deslizar 15s linear infinite;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Animación continua */
+  @keyframes deslizar {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+  
+  /*INFORMACION HISTORIA Y HORARIO*/
   .info1 {
     background-color: rgba(233, 239, 155, 0.2);
     color: white;
@@ -178,23 +208,23 @@ margin-left: 80px;
   
   
   
-  /*Contenedor Productos*/
-  .contenedor-productos{
-    background-image: url('fondoservicios.png'); /*Carga la imagen deseada*/
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    width: 100%;
-    height: 100%;
-    margin-top: 5px;
-    border-radius: 8px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
-    gap: 20px; /* Espacio entre los productos */
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-  }
+/*Contenedor Productos*/
+.contenedor-productos {
+  background-image: url('fondoservicios.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  border-radius: 8px;
+  display: flex; /* cambia de grid a flex */
+  flex-wrap: wrap; /* permite múltiples líneas */
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
+  gap: 20px;
+  padding: 20px;
+}
 
 .titulo-productos{
   background-color: #eedf5d;
