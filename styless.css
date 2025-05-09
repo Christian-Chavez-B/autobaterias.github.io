@@ -76,6 +76,7 @@ margin-left: 80px;
   .nav-links li a {
     color: #11153a;
     text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
     padding: 6px 10px;
     transition: background 0.3s, color 0.3s;
@@ -90,15 +91,25 @@ margin-left: 80px;
 
   /*Contenedor Inicio*/
   .foto-inicio {
-    background-image: url('fondo1.jpeg');
-    background-size: contain; 
+    background-image: url('fondolocal.jpeg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 1200px;
+    width: 100%;
     height: 450px;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
 }
+
+.logoautobaterias {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  opacity: 0.8; /* Ajusta entre 0 (completamente transparente) y 1 (opaco) */
+}
+
+
 
   .contenedor-inicio{
     background-image: url('fondo inicio.png'); /*Carga la imagen deseada*/
@@ -153,7 +164,21 @@ margin-left: 80px;
     border-radius: 8px;
   }
 
-  /*BANNER DE SERVICIO A DOMICILIO*/
+  /*SERVICIO A DOMICILIO*/
+  .servdomicilio {
+    background: radial-gradient(circle, #90bcd6, #0077be, #b283c6);
+    display: flex;            /* Importante para que align-items funcione */
+    align-items: center;      /* Alinea verticalmente */
+    justify-content: center;  /* Alinea horizontalmente */
+  }
+  
+  .logo-servdom{
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /*BANNER DE SERVICIO A DOMICILIO
   .banner {
     width: 100vw;
     height: 100px;
@@ -164,10 +189,10 @@ margin-left: 80px;
   
   .slider {
     display: flex;
-    width: calc(50%); /* dos imágenes */
+    width: calc(50%); 
     height: 100%;
     animation: deslizar 15s linear infinite;
-  }
+  }*/
   
   .slider img {
     width: 100%;
