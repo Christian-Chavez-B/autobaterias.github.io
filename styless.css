@@ -103,10 +103,10 @@ margin-left: 80px;
 }
 
 .logoautobaterias {
-  width: 400px;
-  height: 250px;
+  width: 800px;
+  height: 650px;
   border-radius: 10px;
-  opacity: 0.8; /* Ajusta entre 0 (completamente transparente) y 1 (opaco) */
+  /*opacity: 0.8; /* Ajusta entre 0 (completamente transparente) y 1 (opaco) */
 }
 
 
@@ -170,12 +170,13 @@ margin-left: 80px;
     display: flex;            /* Importante para que align-items funcione */
     align-items: center;      /* Alinea verticalmente */
     justify-content: center;  /* Alinea horizontalmente */
+    gap: 20PX;
   }
   
   .logo-servdom{
     width: 20%;
     height: auto;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
   }
 
   /*BANNER DE SERVICIO A DOMICILIO
