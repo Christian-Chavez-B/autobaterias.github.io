@@ -17,27 +17,46 @@ body{
 }
 
 /*Botón de WhatsApp*/
-.whatsapp-btn {
-  position: fixed;
-  top: 50%;
-  right: 0; /* Cambia a `left: 0` si lo quieres al lado izquierdo */
-  transform: translateY(-50%);
-  background-color: #25D366;
-  color: white;
-  border-radius: 8px 0 0 8px;
-  padding: 12px 16px;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  z-index: 9999;
-}
+ .whatsapp-fixed {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 9999;
+  }
 
-.whatsapp-btn:hover {
-  background-color: #1ebe5b;
-}
+  .whatsapp-fixed a {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+
+  .whatsapp-fixed a:hover {
+    background-color: #1ebe5d; /* tono más oscuro al pasar el mouse */
+  }
+
+  .whatsapp-fixed a i {
+    font-size: 32px;
+  }
+
+  .whatsapp-fixed img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
 
 /*Diseño del menu*/
 /*Tamaño del logo de Autobaterias*/
@@ -96,7 +115,7 @@ margin-left: 80px;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 450px;
+    height: 600px;
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center;     /* Centra verticalmente */
