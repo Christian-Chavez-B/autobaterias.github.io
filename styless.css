@@ -59,58 +59,58 @@ body{
   }
 
 /*Diseño del menu*/
-/*Tamaño del logo de Autobaterias*/
-.logo1{
-width: 260px;
-height: 60px;
-margin-left: 80px;
-}
-
-/* Estilos para la barra de navegación */
-.navbar {
-  background-color: #fdfdfd; /* color de fondo de la barra de navegación */
-  display: flex;
-  align-items: center;
-  padding: 20px 20px; /* aumenta el alto con más padding vertical */
-  border-radius: 0; /* elimina el borde redondeado si ya no hay espacio arriba */
-  position: fixed; /* fija el navbar en la parte superior */
-  top: 0; /* sin espacio arriba */
+.menu-principal {
+  position: fixed;
+  top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000; /* asegura que esté por encima de otros elementos */
+  width: 100%;
+  z-index: 1000; /* Asegura que quede por encima del resto */
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo semitransparente */
+  backdrop-filter: blur(4px); /* Opcional */
+  padding: 10px 0;
+  text-align: center;
 }
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    flex: 1px;
-    list-style: none;
-    gap: 1.5rem; /* o el espaciado que prefieras */
-    justify-content: center; /* Centrado horizontal */
-    align-items: center;     /* Centrado vertical */
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li a {
-    color: #11153a;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 6px 10px;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  /* Cambia el color de fondo y texto al pasar el mouse */
-  .nav-links li a:hover {
-    background-color: #eedf5d; /* Color de fondo al hacer hover */
-    color: #333; /* Color del texto al hacer hover */
-    border-radius: 5px;
-  }
+.logo1 {
+  display: block;
+  margin: 0 auto 10px auto;
+  max-width: 350px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que los elementos se ajusten si se reduce el ancho */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: yellow;
+  border-radius: 5px;
+}
+
 
   /*Contenedor Inicio*/
   .foto-inicio {
-    background-image: url('fondolocal.jpeg');
+    background-image: url('fondoprincipal.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -121,12 +121,12 @@ margin-left: 80px;
     align-items: center;     /* Centra verticalmente */
 }
 
-.logoautobaterias {
+/*.logoautobaterias {
   width: 800px;
   height: 650px;
   border-radius: 10px;
-  /*opacity: 0.8; /* Ajusta entre 0 (completamente transparente) y 1 (opaco) */
-}
+  /*opacity: 0.8; /* Ajusta entre 0 (completamente transparente) y 1 (opaco) 
+}*/
 
 
 
