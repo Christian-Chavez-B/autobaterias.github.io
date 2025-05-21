@@ -103,7 +103,7 @@ body{
 }
 
 .nav-links li a:hover {
-  background-color: yellow;
+  background-color: #eedf5d;
   border-radius: 5px;
 }
 
