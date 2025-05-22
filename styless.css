@@ -231,27 +231,30 @@ body{
   }
   
   /*INFORMACION HISTORIA Y HORARIO*/
-  .info1 {
-    background-color: rgba(233, 239, 155, 0.2);
-    color: white;
-    width: 450px;
-    height: 250px;
-    border-radius: 8px;
-    border-width: 5px;
-    border-color: #3498db;
-    border-style: solid;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
-    padding: 15px;
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-    word-break: break-word;
+.info1 {
+  background-color: rgba(233, 239, 155, 0.2);
+  color: white;
+  width: 450px;
+  height: 250px;
+  border-radius: 8px;
+  border-width: 5px;
+  border-color: #3498db;
+  border-style: solid;
+  margin-top: 30px;
+  margin-bottom: 30px;
   
-    overflow-y: auto; /* Muestra scroll vertical si es necesario */
-  }
-  
-  
+  padding: 15px;
+  box-sizing: border-box;
+
+  font-size: 14px; /* Tamaño más grande para ocupar más espacio */
+  line-height: 1.6; /* Más alto para expandir verticalmente el texto */
+  text-align: justify; /* Hace que el texto sea homogéneo en ancho */
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden; /* Elimina scroll si no es necesario */
+}
+
   
 /*Contenedor Productos*/
 .contenedor-productos {
@@ -462,7 +465,9 @@ body{
         background: #11153a;
         transition: background 0.3s;
         color: white;
+        font-family: Arial, sans-serif;
         font-weight: bold;
+        font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
       }
   
       .faq-label:hover {
@@ -474,13 +479,23 @@ body{
         max-height: 0;
         overflow: hidden;
         background: #fff;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
         transition: max-height 0.3s ease;
         padding: 0 15px;
       }
   
       input[type="checkbox"]:checked + .faq-label + .faq-content {
-        max-height: 200px;
+        max-height: 230px;
         padding: 15px;
+      }
+
+      /*INFORMACION DE LA EMPRESA*/
+      .contenedor-info {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
       }
 
       /*CARRUSEL DE IMAGENES INTRO*/
