@@ -465,3 +465,95 @@ body{
         font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
       }
       
+/*RESPONSIVO PARA CELULARES*/
+@media screen and (max-width: 768px) {
+
+  .logo1 {
+    max-width: 80%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .foto-inicio {
+    height: 300px;
+  }
+
+  .contenedor-inicio {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .info1 {
+    width: 90%;
+    height: auto;
+    font-size: 12px;
+  }
+
+  .bateria {
+    width: 80%;
+  }
+
+  .contenedor-productos {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bateria1 {
+    width: 90%;
+    height: auto;
+  }
+
+  .bateria-a {
+    width: 90%;
+    height: auto;
+  }
+
+  .contenedor-servicios {
+    gap: 20px;
+  }
+
+  .servicio {
+    width: 150px;
+    height: 150px;
+  }
+
+  .fila-contacto {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contenedor-maps iframe {
+    width: 90%;
+    height: 300px;
+  }
+
+  .contenedor-info {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .faq-container {
+    width: 90%;
+  }
+
+  .whatsapp-fixed {
+    top: unset;
+    bottom: 20px;
+    right: 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-fixed img {
+    width: 150px;
+  }
+
+  .whatsapp-fixed a {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
