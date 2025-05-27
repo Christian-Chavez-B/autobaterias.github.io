@@ -465,7 +465,7 @@ body{
         font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
       }
       
-/*RESPONSIVO PARA CELULARES
+/*RESPONSIVO PARA CELULARES*/
 @media screen and (max-width: 768px) {
 
   .logo1 {
@@ -557,4 +557,3 @@ body{
     padding: 10px 15px;
   }
 }
-*/
