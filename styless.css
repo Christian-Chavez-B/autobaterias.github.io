@@ -467,15 +467,24 @@ body{
       
 /*RESPONSIVO PARA CELULARES*/
 @media screen and (max-width: 768px) {
+.menu-principal {
+  padding: 4px 0;
+}
 
-  .logo1 {
-    max-width: 80%;
-  }
+.logo1 {
+  max-width: 150px;
+  margin-bottom: 5px;
+}
 
   .nav-links {
     flex-direction: column;
     gap: 10px;
   }
+
+.nav-links li a {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+}
 
   .foto-inicio {
     height: 300px;
