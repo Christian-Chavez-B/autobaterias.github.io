@@ -202,7 +202,7 @@ body{
   
 /*Contenedor Productos*/
 .contenedor-productos {
-  background-image: url('fondoservicios.png');
+  background-image: url('fondomedidor.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -227,7 +227,7 @@ body{
 }
 /*1er contenedor de imagen dentro de productos*/
 .bateria1{
-  background-color: rgba(52, 152, 219, 0.2); /* 0.2 = 20% de opacidad */
+  background: transparent;/* 0.2 = 20% de opacidad */
   color: white;
   display: flex;
   flex-direction: column;   /* apila verticalmente */
@@ -246,8 +246,7 @@ body{
   border-radius: 8px;
 }
 
-
-/* ===== EFECTO FLIP TARJETA ===== */
+/* ===== TARJETA FLIP CORREGIDA ===== */
 
 .bateria1 {
   perspective: 1000px;
@@ -260,42 +259,58 @@ body{
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform 0.6s ease;
   transform-style: preserve-3d;
 }
 
+/* Solo rota cuando está activa */
 .bateria1.active .card-inner {
   transform: rotateY(180deg);
 }
 
+/* LADOS */
 .card-front,
 .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  backface-visibility: hidden;
+  backface-visibility: hidden;   /* 🔥 CLAVE */
+  -webkit-backface-visibility: hidden; /* móvil */
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Frente */
+/* FRENTE */
 .card-front {
-  background: white;
+  background: rgba(255, 255, 255, 0.1); /* 🔥 blanco semitransparente */
+  backdrop-filter: blur(4px);           /* efecto vidrio moderno */
+  border-radius: 15px;
 }
 
-/* Atrás */
+/* ATRÁS */
 .card-back {
-  background: #11153a;
+  background: rgba(17,21,58,0.85); /* semitransparente */
   color: white;
   transform: rotateY(180deg);
+  border-radius: 15px;
+  padding: 20px;
   text-align: center;
 }
 
+/* Texto "Pulsa para información" */
+.card-front p {
+  background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(30,30,30,0.6));
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
 /* Entrada: deslizamiento hacia arriba */
 @keyframes slideUp {
