@@ -1,0 +1,598 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  background-color: #fdfdfd;
+}
+
+.titulo{
+    color: white;
+    text-align: center;
+}
+
+/*Botón de WhatsApp*/
+ .whatsapp-fixed {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 9999;
+  }
+
+  .whatsapp-fixed a {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+
+  .whatsapp-fixed a:hover {
+    background-color: #1ebe5d; /* tono más oscuro al pasar el mouse */
+  }
+
+  .whatsapp-fixed a i {
+    font-size: 32px;
+  }
+
+  .whatsapp-fixed img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+/*Diseño del menu*/
+.menu-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que quede por encima del resto */
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo semitransparente */
+  backdrop-filter: blur(4px); /* Opcional */
+  padding: 10px 0;
+  text-align: center;
+}
+
+.logo1 {
+  display: block;
+  margin: 0 auto 10px auto;
+  max-width: 350px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que los elementos se ajusten si se reduce el ancho */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #eedf5d;
+  border-radius: 5px;
+}
+
+
+  /*Contenedor Inicio*/
+  .foto-inicio {
+    background-image: url('fondoprincipal.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+}
+
+  .contenedor-inicio{
+    background-image: url('fondo inicio.png'); /*Carga la imagen deseada*/
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%;
+    height: 350px;
+    margin-top: 0px;
+    /*border-radius: 8px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .horario{
+    background-color: #eedf5d;
+    color: black;        /* Texto en negro */
+    font-weight: bold;   /* Texto en negrita */
+    width: 200px;
+    height: auto;
+    border-width: 5px;
+    border-color: #3498db;
+    border-style: solid;
+    border-radius: 8px;
+    margin-left: 50px;
+  }
+
+  .bateria{
+      width: 300px; /* Ancho de la imagen de bateria*/
+  }
+
+  .logo-principal{ /*Ubicación logo empresa*/
+    background-color: #11153a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .logo-auto{ /*Tamaño del logo del autobaterias*/
+    width: 40%;
+    height: 20%;
+    border-radius: 8px;
+  }
+
+  .logo-auto2{
+    width: 225px;
+    height: 300px;
+    margin-left: 10px;
+    border-radius: 8px;
+  }
+   
+  /*INFORMACION HISTORIA Y HORARIO*/
+.info1 {
+  background-color: rgba(233, 239, 155, 0.2);
+  color: white;
+  width: 450px;
+  height: 250px;
+  border-radius: 8px;
+  border-width: 5px;
+  border-color: #3498db;
+  border-style: solid;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+  padding: 15px;
+  box-sizing: border-box;
+
+  font-size: 14px; /* Tamaño más grande para ocupar más espacio */
+  line-height: 1.6; /* Más alto para expandir verticalmente el texto */
+  text-align: justify; /* Hace que el texto sea homogéneo en ancho */
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden; /* Elimina scroll si no es necesario */
+}
+
+  
+/*Contenedor Productos*/
+.contenedor-productos {
+  background-image: url('fondoservicios.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  border-radius: 8px;
+  display: flex; /* cambia de grid a flex */
+  flex-wrap: wrap; /* permite múltiples líneas */
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
+  gap: 20px;
+  padding: 20px;
+}
+
+.titulo-productos{
+  background-color: #eedf5d;
+  display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  border-radius: 8px;
+}
+/*1er contenedor de imagen dentro de productos*/
+.bateria1{
+  background-color: rgba(52, 152, 219, 0.2); /* 0.2 = 20% de opacidad */
+  color: white;
+  display: flex;
+  flex-direction: column;   /* apila verticalmente */
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  width: 300px;
+  height: 350px;
+  object-fit: cover; /* Escala y recorta sin deformar */
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.bateria-a{
+  width: 250px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+
+/* ===== EFECTO FLIP TARJETA ===== */
+
+.bateria1 {
+  perspective: 1000px;
+  width: 300px;
+  height: 350px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.bateria1.active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Frente */
+.card-front {
+  background: white;
+}
+
+/* Atrás */
+.card-back {
+  background: #11153a;
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+
+/* Entrada: deslizamiento hacia arriba */
+@keyframes slideUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Salida: deslizamiento hacia abajo */
+@keyframes slideDown {
+  to {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+/*BOTON PARA MOSTRAR INFORMACION DE LAS BATERIAS*/
+.boton-circular {
+      width: 30px;
+      height: 30px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 32px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .boton-circular:hover {
+      transform: rotate(90deg) scale(1.1);
+      background-color: #0056b3;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+  /*Conetenedor Servicios*/
+  .contenedor-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.servicio {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    /*Conetenedor Contacto*/
+    .contenedor-contacto {
+      background-color: #c8c9ce;
+      color: #11153a;
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 8px;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .fila-contacto {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .contenedor-maps iframe {
+      border-radius: 8px;
+    }
+    
+    .redes-sociales {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #c8c9ce;
+      display: flex;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .redes-sociales i {
+      font-size: 40px; /* Puedes ajustar a 36px o 40px si quieres aún más grandes */
+      color: #11153a;  /* Opcional: cambia el color si lo deseas */
+      transition: transform 0.2s ease;
+    }
+    
+    .redes-sociales i:hover {
+      transform: scale(1.2); /* Efecto hover para dar un toque visual */
+    }
+
+    /*Conetenedor Informacion*/
+    .contenedor-informacion{
+        background-color: #eedf5d; 
+        height: 100%;
+        margin-top: 20px;
+        border-radius: 8px;
+        justify-items: center;
+      }
+
+      .faq-container {
+        max-width: 600px;
+        margin: 50px auto;
+        font-family: Arial, sans-serif;
+      }
+  
+      .faq-item {
+        border-bottom: 1px solid #eedf5d; 
+      }
+  
+      input[type="checkbox"] {
+        display: none;
+      }
+  
+      .faq-label {
+        display: block;
+        padding: 15px;
+        cursor: pointer;
+        background: #11153a;
+        transition: background 0.3s;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
+      }
+  
+      .faq-label:hover {
+        background: #e0e0e0;
+        color: black;
+      }
+  
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        background: #fff;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
+        transition: max-height 0.3s ease;
+        padding: 0 15px;
+      }
+  
+      input[type="checkbox"]:checked + .faq-label + .faq-content {
+        max-height: 230px;
+        padding: 15px;
+      }
+
+      /*INFORMACION DE LA EMPRESA*/
+      .contenedor-info {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
+      }
+      
+/*RESPONSIVO PARA CELULARES*/
+@media screen and (max-width: 768px) {
+.menu-principal {
+  padding: 4px 0;
+}
+
+.logo1 {
+  max-width: 150px;
+  margin-bottom: 5px;
+}
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+.nav-links li a {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+}
+
+  .foto-inicio {
+    height: 300px;
+  }
+
+  .contenedor-inicio {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .info1 {
+    width: 90%;
+    height: auto;
+    font-size: 12px;
+  }
+
+  .bateria {
+    width: 80%;
+  }
+
+  .contenedor-productos {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bateria1 {
+    width: 90%;
+    height: auto;
+  }
+
+  .bateria-a {
+    width: 90%;
+    height: auto;
+  }
+
+  .contenedor-servicios {
+    gap: 20px;
+  }
+
+  .servicio {
+    width: 150px;
+    height: 150px;
+  }
+
+  .fila-contacto {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contenedor-maps iframe {
+    width: 90%;
+    height: 300px;
+  }
+
+  .contenedor-info {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .faq-container {
+    width: 90%;
+  }
+
+  .whatsapp-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  top: auto;
+  transform: none;
+
+  display: flex;
+  flex-direction: row;   /* ahora lado a lado */
+  align-items: center;
+  gap: 10px;
+}
+
+/* Oculta el texto en celular */
+.texto-whatsapp {
+  display: none;
+}
+
+/* Hace el botón redondo solo con el icono */
+.whatsapp-fixed a {
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+/* Tamaño imagen móvil */
+.whatsapp-fixed img {
+  width: 120px;
+}
+
+
+}
