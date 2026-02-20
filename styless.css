@@ -246,67 +246,56 @@ body{
   border-radius: 8px;
 }
 
-/*Popup dentro del segmento productos*/
-/* ===== POPUP CORREGIDO ===== */
 
-.popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(6px);
+/* ===== EFECTO FLIP TARJETA ===== */
+
+.bateria1 {
+  perspective: 1000px;
+  width: 300px;
+  height: 350px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.bateria1.active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  z-index: 2000;
-
-  opacity: 0;
-  pointer-events: none;   /* 🔥 NO bloquea cuando está oculto */
-  transition: opacity 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.popup.show {
-  opacity: 1;
-  pointer-events: all;    /* 🔥 Solo bloquea cuando está visible */
-}
-
-/* Caja del mensaje */
-.popup-content {
+/* Frente */
+.card-front {
   background: white;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
-  padding: 25px 20px;
+}
+
+/* Atrás */
+.card-back {
+  background: #11153a;
+  color: white;
+  transform: rotateY(180deg);
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-
-  transform: scale(0.8);
-  transition: transform 0.3s ease;
 }
 
-.popup.show .popup-content {
-  transform: scale(1);
-}
-
-/* Botón cerrar */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #999;
-}
-
-.close:hover {
-  color: #000;
-}
-
-#popup-text {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: #333;
-}
 
 /* Entrada: deslizamiento hacia arriba */
 @keyframes slideUp {
@@ -324,9 +313,6 @@ body{
   }
 }
 
-.popup-content.hide-animation {
-  animation: slideDown 0.4s ease-in forwards;
-}
 
 .close {
   color: #aaa;
@@ -608,55 +594,5 @@ body{
   width: 120px;
 }
 
-/*Mensaje de texto cuando se pulsa el botón de ver mas...*/
-.popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;   /* 🔥 centra verticalmente */
-  }
 
-  .popup-content {
-    margin: 0;             /* elimina el 15% */
-    width: 90%;
-    max-width: 350px;
-  }
-
-}
-
-
-/*Animación POPUOUT*/
-
-/* Animación entrada */
-@keyframes popupIn {
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Animación salida */
-.popup-content.hide-animation {
-  animation: popupOut 0.3s ease forwards;
-}
-
-@keyframes popupOut {
-  to {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-}
-
-/* Botón cerrar */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #999;
-  transition: 0.3s;
-}
-
-.close:hover {
-  color: #000;
 }
