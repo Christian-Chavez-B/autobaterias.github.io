@@ -247,36 +247,65 @@ body{
 }
 
 /*Popup dentro del segmento productos*/
+/* ===== POPUP CORREGIDO ===== */
+
 .popup {
-  display: none;
   position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-}
-
-/* Mostrar el popup */
-.popup.show {
-  display: block;
-}
-
-/* Contenido del popup */
-.popup-content {
-  background-color: #fff;
-  margin: 15% auto;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  
+  z-index: 2000;
+
   opacity: 0;
-  transform: translateY(100px);
-  animation: slideUp 0.4s ease-out forwards;
+  pointer-events: none;   /* 🔥 NO bloquea cuando está oculto */
+  transition: opacity 0.3s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: all;    /* 🔥 Solo bloquea cuando está visible */
+}
+
+/* Caja del mensaje */
+.popup-content {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.popup.show .popup-content {
+  transform: scale(1);
+}
+
+/* Botón cerrar */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close:hover {
+  color: #000;
+}
+
+#popup-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
 }
 
 /* Entrada: deslizamiento hacia arriba */
@@ -578,5 +607,56 @@ body{
 .whatsapp-fixed img {
   width: 120px;
 }
+
+/*Mensaje de texto cuando se pulsa el botón de ver mas...*/
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* 🔥 centra verticalmente */
+  }
+
+  .popup-content {
+    margin: 0;             /* elimina el 15% */
+    width: 90%;
+    max-width: 350px;
+  }
+
 }
 
+
+/*Animación POPUOUT*/
+
+/* Animación entrada */
+@keyframes popupIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animación salida */
+.popup-content.hide-animation {
+  animation: popupOut 0.3s ease forwards;
+}
+
+@keyframes popupOut {
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Botón cerrar */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #000;
+}
