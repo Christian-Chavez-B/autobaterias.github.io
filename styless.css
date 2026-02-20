@@ -550,19 +550,25 @@ body{
   }
 
   .whatsapp-fixed {
-    top: unset;
+    position: fixed;
     bottom: 20px;
     right: 10px;
-    flex-direction: row;
+    top: auto;
+    transform: none;              /* 🔥 IMPORTANTE */
+    
+    display: flex;
+    flex-direction: column;       /* uno debajo del otro */
     align-items: center;
-  }
-
-  .whatsapp-fixed img {
-    width: 150px;
+    gap: 10px;                    /* espacio entre botón e imagen */
   }
 
   .whatsapp-fixed a {
-    font-size: 16px;
-    padding: 10px 15px;
+    margin-bottom: 0;             /* eliminamos margen viejo */
   }
+
+  .whatsapp-fixed img {
+    width: 140px;                 /* opcional: tamaño más adecuado móvil */
+  }
+
 }
+
