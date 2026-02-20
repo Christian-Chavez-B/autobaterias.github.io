@@ -550,25 +550,33 @@ body{
   }
 
   .whatsapp-fixed {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    top: auto;
-    transform: none;              /* 🔥 IMPORTANTE */
-    
-    display: flex;
-    flex-direction: column;       /* uno debajo del otro */
-    align-items: center;
-    gap: 10px;                    /* espacio entre botón e imagen */
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  top: auto;
+  transform: none;
 
-  .whatsapp-fixed a {
-    margin-bottom: 0;             /* eliminamos margen viejo */
-  }
+  display: flex;
+  flex-direction: row;   /* ahora lado a lado */
+  align-items: center;
+  gap: 10px;
+}
 
-  .whatsapp-fixed img {
-    width: 140px;                 /* opcional: tamaño más adecuado móvil */
-  }
+/* Oculta el texto en celular */
+.texto-whatsapp {
+  display: none;
+}
 
+/* Hace el botón redondo solo con el icono */
+.whatsapp-fixed a {
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+/* Tamaño imagen móvil */
+.whatsapp-fixed img {
+  width: 120px;
+}
 }
 
