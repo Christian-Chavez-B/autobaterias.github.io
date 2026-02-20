@@ -594,5 +594,36 @@ body{
   width: 120px;
 }
 
+/* ===== AJUSTE TARJETAS EN MÓVIL ===== */
+
+.bateria1 {
+  width: 90%;
+  max-width: 320px;
+  height: 380px;   /* un poco más alto para texto */
+  margin: 0 auto;
+}
+
+.card-front,
+.card-back {
+  padding: 15px;
+}
+
+.bateria-a {
+  width: 85%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.card-front h3,
+.card-back h3 {
+  font-size: 1rem;
+}
+
+.card-back p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 
 }
