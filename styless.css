@@ -16,17 +16,7 @@ body{
     text-align: center;
 }
 
-/*Botón de WhatsApp*/
- .whatsapp-fixed {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 9999;
-  }
+
 
   .whatsapp-fixed a {
     background-color: #25D366;
@@ -53,7 +43,7 @@ body{
   }
 
   .whatsapp-fixed img {
-    width: 250px;
+    width: 200px;   /* tamaño más pequeño */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   }
@@ -246,6 +236,28 @@ body{
   border-radius: 8px;
 }
 
+/* BOTÓN WHATSAPP FIJO ABAJO DERECHA */
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  top: auto;
+  left: auto;
+  transform: none;
+
+  display: flex;
+  flex-direction: column;  /* escritorio vertical */
+  align-items: center !important;
+  gap: 10px;
+
+  z-index: 99999;
+}
+
+/*Texto de WhatsApp*/
+.texto-whatsapp {
+  font-size: 12px;
+}
+
 /* ===== TARJETA FLIP CORREGIDA ===== */
 
 .bateria1 {
@@ -281,6 +293,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: left;
 }
 
 /* FRENTE */
@@ -297,7 +310,7 @@ body{
   transform: rotateY(180deg);
   border-radius: 15px;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 /* Texto "Pulsa para información" */
@@ -578,36 +591,55 @@ body{
   .faq-container {
     width: 90%;
   }
+/* Imagenes de WhatsApp e Imagen */
 
-  .whatsapp-fixed {
-  position: fixed;
-  bottom: 20px;
-  right: 10px;
-  top: auto;
-  transform: none;
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
 
-  display: flex;
-  flex-direction: row;   /* ahora lado a lado */
-  align-items: center;
-  gap: 10px;
-}
+    display: flex;
+    flex-direction: row;
+    align-items: center;   /* centra por eje vertical real */
+    justify-content: center;
+    gap: 10px;
+  }
 
-/* Oculta el texto en celular */
-.texto-whatsapp {
-  display: none;
-}
+  /* 🔥 ALTURA BASE EXACTA */
+  .whatsapp-fixed a,
+  .whatsapp-fixed img {
+    height: 50px;
+  }
 
-/* Hace el botón redondo solo con el icono */
-.whatsapp-fixed a {
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 22px;
-}
+  /* BOTÓN */
+  .whatsapp-fixed a {
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
 
-/* Tamaño imagen móvil */
-.whatsapp-fixed img {
-  width: 120px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0; /* 🔥 elimina baseline interno */
+  }
+
+  /* ICONO */
+  .whatsapp-fixed a i {
+    font-size: 26px;
+    display: block; /* 🔥 elimina comportamiento inline */
+  }
+
+  /* IMAGEN */
+  .whatsapp-fixed img {
+    width: auto;
+    display: block;
+  }
+
+  /* OCULTAR TEXTO */
+  .texto-whatsapp {
+    display: none;
+  }
 
 /* ===== AJUSTE TARJETAS EN MÓVIL ===== */
 
@@ -638,6 +670,7 @@ body{
 .card-back p {
   font-size: 0.9rem;
   line-height: 1.4;
+  text-align: left;
 }
 
 
